@@ -1,0 +1,533 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToyNest - Play, Build, Discover</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header id="home">
+    <h1>ToyNest</h1>
+    <p>Play • Build • Discover</p>
+    <p style="color:#e7837d; background-color:#fff0e8; padding:15px;
+       border:2px dashed #e7837d; border-radius:10px; text-align:center;">
+        Welcome to ToyNest! Learning is always an adventure!
+    </p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#multimedia">Multimedia</a></li>
+        <li><a href="#register">Registration</a></li>
+        <li><a href="#styling">CSS Styling</a></li>
+        <li class="dropdown">
+            <a href="#flex-layout">Explore ▼</a>
+            <ul class="dropdown-menu">
+                <li><a href="#creative-toys">Creative Toys</a></li>
+                <li><a href="#puzzle-toys">Puzzle Games</a></li>
+                <li><a href="#science-toys">Science Kits</a></li>
+            </ul>
+        </li>
+        <li><a href="#positioning">Positioning</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#responsive-design">Responsive Design</a></li>
+        <li><a href="#animations">Animations</a></li>
+        <li><a href="#dom-manipulation">DOM</a></li>
+        <li><a href="#form-validation">Form Validation</a></li>
+        <li><a href="#api-integration">REST API</a></li>
+        <li><a href="#task-manager">Task Manager</a></li>
+    </ul>
+</nav>
+
+<main>
+
+    <!-- SUB-PRACTICUM 2: HTML5 MULTIMEDIA -->
+    <section id="multimedia" class="multimedia">
+        <h2>Explore Our Multimedia</h2>
+        <div class="media-container">
+
+            <div class="media-card">
+                <h3>Listen to ToyNest Audio</h3>
+                <audio controls>
+                    <source src="ToyNest Audio.mp3" type="audio/mpeg">
+                    Your browser does not support audio.
+                </audio>
+            </div>
+
+            <div class="media-card">
+                <h3>Watch Our ToyNest Video</h3>
+                <video controls playsinline>
+                    <source src="ToyNest.mp4" type="video/mp4">
+                    Your browser does not support video.
+                </video>
+            </div>
+
+            <div class="media-card">
+                <h3>ToyNest Poster PDF</h3>
+                <embed src="ToyNest_Poster.pdf" type="application/pdf">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SUB-PRACTICUM 3: HTML FORM -->
+    <section id="register" class="form-section">
+        <h2>Kids Registration Form</h2>
+
+        <div class="form-container">
+            <form action="#" method="post">
+
+                <label for="child-name">Child's Name:</label>
+                <input type="text" id="child-name" name="child-name"
+                       placeholder="Enter child's name" required>
+
+                <label for="email">Parent's Email:</label>
+                <input type="email" id="email" name="email"
+                       placeholder="Enter email address" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone"
+                       pattern="[0-9]{10}"
+                       placeholder="10-digit phone number" required>
+
+                <label for="age">Child's Age:</label>
+                <input type="number" id="age" name="age"
+                       min="1" max="15" required>
+
+                <label for="date">Registration Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <p class="form-label">Gender:</p>
+                <div class="radio-group">
+                    <label><input type="radio" name="gender" value="Male"> Male</label>
+                    <label><input type="radio" name="gender" value="Female"> Female</label>
+                    <label><input type="radio" name="gender" value="Other"> Other</label>
+                </div>
+
+                <label for="toy">Choose a Toy or Learning Kit:</label>
+                <select id="toy" name="toy" required>
+                    <option value="">Select an option</option>
+                    <option value="Building Blocks">Building Blocks</option>
+                    <option value="Puzzle Games">Puzzle Games</option>
+                    <option value="Science Kit">Science Kit</option>
+                    <option value="Art Kit">Art Kit</option>
+                </select>
+
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" name="updates" value="yes">
+                        Receive updates about new toys
+                    </label>
+                </div>
+
+                <label for="requirements">Additional Requirements:</label>
+                <textarea id="requirements" name="requirements" rows="4"
+                          placeholder="Enter additional requirements"></textarea>
+
+                <button type="submit">Register Now</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- SUB-PRACTICUM 4: CSS STYLING -->
+    <section id="styling" class="style-section">
+        <h2>Discover Our Creative World!</h2>
+
+        <div class="style-card" id="creative-style">
+            <h3>Creative Toys</h3>
+            <p>Explore your imagination with colourful toys.</p>
+            <span class="style-tag">Create</span>
+        </div>
+
+        <div class="style-card">
+            <h3>Puzzle Games</h3>
+            <p>Improve problem-solving skills through puzzles.</p>
+            <span class="style-tag">Think</span>
+        </div>
+
+        <div class="style-card">
+            <h3>Science Kits</h3>
+            <p>Discover science through exciting experiments.</p>
+            <span class="style-tag">Discover</span>
+        </div>
+    </section>
+
+    <!-- SUB-PRACTICUM 5: FLEXBOX AND GRID -->
+    <section id="flex-layout" class="flex-section">
+        <h2>Explore Our Toy Collection</h2>
+
+        <div class="flex-container">
+            <div class="flex-card" id="creative-toys">
+                <h3>Creative Toys</h3>
+                <p>Build, create and bring your imagination to life!</p>
+            </div>
+
+            <div class="flex-card" id="puzzle-toys">
+                <h3>Puzzle Games</h3>
+                <p>Challenge your mind with exciting puzzles!</p>
+            </div>
+
+            <div class="flex-card" id="science-toys">
+                <h3>Science Kits</h3>
+                <p>Learn science through fun activities!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUB-PRACTICUM 6: CSS POSITIONING -->
+    <section id="positioning" class="position-section">
+        <h2>CSS Positioning Demonstration</h2>
+        <p>Explore different CSS position types and values.</p>
+
+        <div class="position-grid">
+            <div class="position-card">
+                <h3>Static Position</h3>
+                <div class="static-demo">Static Element</div>
+                <p>Default position of an HTML element.</p>
+            </div>
+
+            <div class="position-card">
+                <h3>Relative Position</h3>
+                <div class="relative-demo">Relative Element</div>
+                <p>Moves relative to its normal position.</p>
+            </div>
+
+            <div class="position-card">
+                <h3>Absolute Position</h3>
+                <div class="absolute-parent">
+                    <div class="absolute-demo">Absolute Element</div>
+                </div>
+                <p>Positioned relative to its nearest positioned ancestor.</p>
+            </div>
+
+            <div class="position-card">
+                <h3>Fixed Position</h3>
+                <div class="fixed-demo">Fixed Position Example</div>
+                <p>Example of fixed-position styling.</p>
+            </div>
+
+            <div class="position-card">
+                <h3>Sticky Position</h3>
+                <div class="sticky-demo">Sticky Element</div>
+                <p>Sticks to a specified position while scrolling.</p>
+            </div>
+        </div>
+
+        <h3>Z-Index Demonstration</h3>
+        <div class="zindex-container">
+            <div class="z-box z-one">Z-index: 1</div>
+            <div class="z-box z-two">Z-index: 2</div>
+            <div class="z-box z-three">Z-index: 3</div>
+        </div>
+
+        <h3>Centered Responsive Quadrant Layout</h3>
+        <div class="quadrant-container">
+            <div class="quadrant quadrant-one">Creative</div>
+            <div class="quadrant quadrant-two">Learning</div>
+            <div class="quadrant quadrant-three">Playing</div>
+            <div class="quadrant quadrant-four">Discovering</div>
+        </div>
+    </section>
+
+    <!-- SUB-PRACTICUM 7: RESPONSIVE IMAGE GALLERY -->
+    <section id="gallery" class="gallery-section">
+        <h2>Our ToyNest Image Gallery</h2>
+
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1"
+                     alt="Colourful toys" loading="lazy">
+                <div class="image-overlay"><h3>Colourful Toys</h3></div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b"
+                     alt="Building blocks" loading="lazy">
+                <div class="image-overlay"><h3>Building Blocks</h3></div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1560961911-ba7ef651a5c5"
+                     alt="Toy collection" loading="lazy">
+                <div class="image-overlay"><h3>Fun Collection</h3></div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1599623560574-39d485900c95"
+                     alt="Educational toys" loading="lazy">
+                <div class="image-overlay"><h3>Learning Toys</h3></div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1599623560574-39d485900c95"
+                     alt="Creative play" loading="lazy">
+                <div class="image-overlay"><h3>Creative Play</h3></div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1"
+                     alt="Kids toy collection" loading="lazy">
+                <div class="image-overlay"><h3>Play and Learn</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUB-PRACTICUM 8: RESPONSIVE WEB DESIGN -->
+    <section id="responsive-design" class="responsive-section">
+        <h2>Responsive Toy Collection</h2>
+        <p>Our layout adjusts to desktop, tablet and phone screens.</p>
+
+        <div class="responsive-grid">
+            <div class="responsive-card">
+                <img src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1"
+                     alt="Creative toys" loading="lazy">
+                <h3>Creative Toys</h3>
+                <p>Encourage imagination and creativity.</p>
+            </div>
+
+            <div class="responsive-card">
+                <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b"
+                     alt="Puzzle toys" loading="lazy">
+                <h3>Puzzle Games</h3>
+                <p>Develop logical thinking and problem-solving.</p>
+            </div>
+
+            <div class="responsive-card">
+                <img src="https://images.unsplash.com/photo-1560961911-ba7ef651a5c5"
+                     alt="Learning toys" loading="lazy">
+                <h3>Learning Kits</h3>
+                <p>Make learning enjoyable and exciting.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUB-PRACTICUM 9: CSS ANIMATIONS -->
+    <section id="animations" class="animation-section">
+        <h2>Fun with ToyNest Animations!</h2>
+
+        <p class="animation-description">
+            Watch our message slide across the screen with a smooth,
+            repeating animation.
+        </p>
+
+        <div class="animation-box">
+            <div class="sliding-text">
+                Welcome to ToyNest! Play, Build and Discover!
+            </div>
+        </div>
+
+        <div class="animation-info">
+            <h3>Keep Learning and Keep Playing!</h3>
+            <p>Our smooth text animation makes the website more attractive.</p>
+        </div>
+    </section>
+
+    <!-- SUB-PRACTICUM 10: DOM MANIPULATION -->
+    <section id="dom-manipulation" class="dom-section">
+        <h2>Interactive ToyNest Playground</h2>
+
+        <p id="dom-message">
+            Welcome to ToyNest! Click the buttons to explore JavaScript DOM manipulation.
+        </p>
+
+        <div class="dom-buttons">
+            <button type="button" onclick="changeMessage()">Change Message</button>
+            <button type="button" onclick="changeColor()">Change Color</button>
+            <button type="button" onclick="addToy()">Add Toy</button>
+        </div>
+
+        <div id="toy-container">
+            <p class="toy-item">Your toys will appear here!</p>
+        </div>
+
+        <div class="dom-form">
+            <h3>Find Your Favourite Toy</h3>
+            <label for="toy-name">Enter toy name:</label>
+            <input type="text" id="toy-name" placeholder="Enter a toy name">
+            <button type="button" onclick="displayToy()">Submit</button>
+            <p id="toy-result"></p>
+        </div>
+
+        <div class="dom-timer">
+            <h3>JavaScript Timer Activities</h3>
+            <p id="timer-message">Click Start to begin the timer!</p>
+
+            <button type="button" onclick="startTimeout()">Start Timeout</button>
+            <button type="button" onclick="cancelTimeout()">Clear Timeout</button>
+
+            <p id="counter">Counter: 0</p>
+            <button type="button" onclick="startInterval()">Start Counter</button>
+            <button type="button" onclick="stopInterval()">Stop Counter</button>
+        </div>
+    </section>
+
+    <!-- SUB-PRACTICUM 11: CLIENT-SIDE FORM VALIDATION -->
+    <section id="form-validation" class="validation-section">
+        <h2>ToyNest Membership Form</h2>
+        <p>Enter your details to become a ToyNest member.</p>
+
+        <div class="validation-container">
+            <form id="validationForm" onsubmit="return false;">
+
+                <label for="member-name">Full Name:</label>
+                <input type="text" id="member-name"
+                       placeholder="Enter your full name" required>
+
+                <label for="member-age">Age:</label>
+                <input type="text" id="member-age"
+                       placeholder="Enter your age" inputmode="numeric" required>
+
+                <label for="member-phone">Phone Number:</label>
+                <input type="text" id="member-phone"
+                       placeholder="Enter 10-digit phone number"
+                       inputmode="numeric" maxlength="10" required>
+
+                <label for="member-email">Email Address:</label>
+                <input type="email" id="member-email"
+                       placeholder="Enter your email" required>
+
+                <button type="button" onclick="validateForm()">Submit</button>
+            </form>
+
+            <div id="validation-result" aria-live="polite">
+                Your validation result will appear here.
+            </div>
+        </div>
+    </section>
+
+    <!-- SUB-PRACTICUM 12: RESTFUL API INTEGRATION -->
+    <section id="api-integration" class="api-section">
+        <h2>ToyNest REST API Playground</h2>
+
+        <p class="api-intro">
+            Explore dynamic data interaction using RESTful APIs.
+            Load toy information from an API and add a new toy.
+        </p>
+
+        <div class="api-container">
+
+            <!-- GET API -->
+            <div class="api-card">
+                <h3>Fetch Toy Data (GET)</h3>
+                <p>Click the button to retrieve sample data from the API.</p>
+
+                <button type="button" onclick="fetchToys()">
+                    Load Toy Data
+                </button>
+
+                <p id="api-status" aria-live="polite">
+                    API data has not been loaded yet.
+                </p>
+
+                <div id="api-data" class="api-data">
+                    <p>Fetched toy details will appear here.</p>
+                </div>
+            </div>
+
+            <!-- POST API -->
+            <div class="api-card">
+                <h3>Add a New Toy (POST)</h3>
+                <p>Enter toy details and send them to the API.</p>
+
+                <form id="apiForm" onsubmit="return false;">
+
+                    <label for="api-toy-name">Toy Name:</label>
+                    <input type="text" id="api-toy-name"
+                           placeholder="Enter toy name">
+
+                    <label for="api-toy-category">Toy Category:</label>
+                    <input type="text" id="api-toy-category"
+                           placeholder="Example: Educational">
+
+                    <button type="button" onclick="addToyAPI()">
+                        Submit Toy
+                    </button>
+                </form>
+
+                <p id="post-status" aria-live="polite">
+                    New toy submission status will appear here.
+                </p>
+            </div>
+
+            <!-- API DEBUGGING -->
+            <div class="api-card debug-card">
+                <h3>API Testing and Debugging</h3>
+                <p>
+                    Use the buttons to test the API connection and view
+                    debugging information in the browser console.
+                </p>
+
+                <button type="button" onclick="testAPI()">
+                    Test API Connection
+                </button>
+
+                <button type="button" onclick="clearAPIDisplay()">
+                    Clear API Results
+                </button>
+
+                <p id="debug-status" aria-live="polite">
+                    Ready to test the API.
+                </p>
+
+                <p class="debug-note">
+                    Open Developer Tools → Console to view API logs and errors.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SUB-PRACTICUM 13: TASK-BASED WEB APP USING JAVASCRIPT AND DOM -->
+    <section id="task-manager" class="task-section">
+        <h2>ToyNest Task Manager</h2>
+
+        <p class="task-intro">
+            Organize your activities! Add, view, edit and delete your tasks
+            using our interactive task manager.
+        </p>
+
+        <div class="task-container">
+
+            <h3>Add a New Task</h3>
+
+            <div class="task-input-group">
+                <input type="text" id="task-input"
+                       placeholder="Enter your task..."
+                       maxlength="100">
+
+                <button type="button" onclick="addTask()">
+                    Add Task
+                </button>
+            </div>
+
+            <p id="task-message" aria-live="polite">
+                Enter a task and click Add Task.
+            </p>
+
+            <h3>Your Task List</h3>
+
+            <div id="task-list">
+                <p class="empty-task">No tasks added yet. Start by adding one!</p>
+            </div>
+
+            <div class="task-summary">
+                <p id="task-count">Total Tasks: 0</p>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 ToyNest | Making Learning Fun!</p>
+</footer>
+
+</body>
+</html>
